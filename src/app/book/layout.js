@@ -11,8 +11,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ar" dir="rtl">
-      <body className="">
+    <html>
+      <body>
         <nav style={{background: "gray", color: "#fff", padding: "15px"}}>add question</nav>
         {children}
       </body>

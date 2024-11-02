@@ -1,12 +1,16 @@
 'use client'
 import { useState } from 'react';
 import styles from './page.module.css'
-import CustomEditor from '@/app/components/custom-editor';
+// import CustomEditor from '@/app/components/custom-editor';
+import dynamic from 'next/dynamic';
+
+const CustomEditor = dynamic( () => import( '@/app/components/custom-editor' ), { ssr: false } );
+
 
 const Addquestion = (props) => {
     const [type, setType] = useState("multiple");
     const [questionNumber, setQuestionNumber] = useState("two");
-    const [correctAnswer, setCorrectAnswer] = useState(null);
+    const [correctAnswer, setCorrectAnswer] = useState('');
     // question and options
     const[question, setQuestion] = useState("<p>Add Question</p>");
     const[option1, setOption1] = useState("<p>option one</p>");
@@ -53,7 +57,7 @@ const Addquestion = (props) => {
                                 <CustomEditor editorData={ option1 } />
                             </div>
                             <div className={`${ styles.correctAnswer } col-2`}>
-                                <label for="correctAnswer">Correct Answer</label>
+                                <label htmlfor="correctAnswer">Correct Answer</label>
                                 <input
                                     id="correctAnswer"
                                     type="checkbox"
@@ -68,7 +72,7 @@ const Addquestion = (props) => {
                                 <CustomEditor editorData={ option2 } />
                             </div>
                             <div className={`${ styles.correctAnswer } col-2`}>
-                                <label for="correctAnswer">Correct Answer</label>
+                                <label htmlfor="correctAnswer">Correct Answer</label>
                                 <input
                                     id="correctAnswer"
                                     type="checkbox"
@@ -87,7 +91,7 @@ const Addquestion = (props) => {
                                 <CustomEditor editorData={ option1 } />
                             </div>
                             <div className={`${ styles.correctAnswer } col-2`}>
-                                <label for="correctAnswer">Correct Answer</label>
+                                <label htmlfor="correctAnswer">Correct Answer</label>
                                 <input
                                     id="correctAnswer"
                                     type="checkbox"
@@ -102,7 +106,7 @@ const Addquestion = (props) => {
                                 <CustomEditor editorData={ option2 } />
                             </div>
                             <div className={`${ styles.correctAnswer } col-2`}>
-                                <label for="correctAnswer">Correct Answer</label>
+                                <label htmlfor="correctAnswer">Correct Answer</label>
                                 <input
                                     id="correctAnswer"
                                     type="checkbox"
@@ -117,7 +121,7 @@ const Addquestion = (props) => {
                                 <CustomEditor editorData={ option3 } />
                             </div>
                             <div className={`${ styles.correctAnswer } col-2`}>
-                                <label for="correctAnswer">Correct Answer</label>
+                                <label htmlfor="correctAnswer">Correct Answer</label>
                                 <input
                                     id="correctAnswer"
                                     type="checkbox"
@@ -132,7 +136,7 @@ const Addquestion = (props) => {
                                 <CustomEditor editorData={ option4 } />
                             </div>
                             <div className={`${ styles.correctAnswer } col-2`}>
-                                <label for="correctAnswer">Correct Answer</label>
+                                <label htmlfor="correctAnswer">Correct Answer</label>
                                 <input
                                     id="correctAnswer"
                                     type="checkbox"

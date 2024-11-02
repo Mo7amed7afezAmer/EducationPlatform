@@ -13,6 +13,7 @@
     "@wiris/mathtype-ckeditor5": "^8.11.1",
     "bootstrap": "^5.3.3",
     "ckeditor5": "^43.3.0",
+    "ckeditor5-premium-features": "^43.3.0",
     "next": "15.0.2",
     "react": "^18",
     "react-dom": "^18"
