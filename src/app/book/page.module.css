@@ -1,0 +1,62 @@
+.paper {
+    margin: auto;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row
+}
+
+.borderLeft {
+    background-color: blueviolet;
+    width: 5%;
+    line-height: normal;
+}
+.partExplain {
+    background-color: #eee;
+    width: 30%;
+
+}
+.partQuestion {
+    border: 1px solid #eee;
+    width: 65%;
+    padding: 20px 5px 20px 7px
+}
+
+/* question component */
+.questionArea {
+    display: flex;
+    gap: 5px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #eee
+}
+.questionInfo {
+    background-color: blueviolet;
+    color: white;
+    border-radius: 3px;
+    padding: 2px 5px;
+    font-size: 12px;
+    height: fit-content;
+    width: fit-content
+}
+.questionTitle {
+    font-weight: bold;
+}
+.questionChoose {
+    display: flex;
+    gap: 2%;
+    flex-wrap: wrap;
+    margin-left: 4%;
+    margin-top: 5px;
+    list-style-type: lower-alpha
+}
+.chooseOne {
+    width: 48%;
+    /* background-color: #ddd; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+}
+.chooseOne p {
+    margin-bottom: 0;
+}

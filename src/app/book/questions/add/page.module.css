@@ -1,0 +1,28 @@
+.addQuestionPage {
+    background-color: #0f0;
+ 
+}
+
+.question {
+    border: 1px solid var(--bg-border)
+}
+.questionType select {
+    width: 100%;
+    padding: 5px
+}
+.chooseBox {
+    border: 1px solid var(--bg-border);
+    margin-right: 0;
+    margin-left: 0
+}
+.choose {
+    padding-right: 0;
+    padding-left: 0;
+}
+.correctAnswer {
+    background-color: var(--bg-border);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}

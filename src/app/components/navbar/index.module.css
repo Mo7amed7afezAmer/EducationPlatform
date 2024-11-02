@@ -1,0 +1,18 @@
+.navbarTopParent {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15;
+}
+.navbarLogo {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-border);
+}
+
+
+
+.test {
+    background-color: #cc00cc;
+}
