@@ -21,7 +21,7 @@ const Addquestion = (props) => {
     const years = Array.from({ length: 5 }, (_, i) => 2020 + i);
 
     return (
-       <div className={`${styles.addQuestion} container`}>
+       <div className={`${styles.addQuestion} container-fluid`}>
              <form>
                 <h2>Add a New Question</h2>
                 <div className={`w-100`}>
