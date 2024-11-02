@@ -14,7 +14,8 @@ import {
     Alignment, 
     Heading, 
     FontFamily, 
-    FontColor 
+    FontColor,
+    SourceEditing
 } from 'ckeditor5';
 import MathType from '@wiris/mathtype-ckeditor5/dist/index.js';
 
@@ -27,6 +28,8 @@ function CustomEditor(props) {
             config={ {
                 toolbar: {
                     items: [
+                        'SourceEditing',
+                        '|',
                         'undo', 'redo',
                         '|',
                         'heading',
@@ -58,6 +61,7 @@ function CustomEditor(props) {
                     FontFamily,
                     FontColor,
                     MathType,
+                    SourceEditing
                 ],
                 mention: { 
                     // Mention configuration
