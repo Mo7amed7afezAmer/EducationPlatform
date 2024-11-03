@@ -1,9 +1,6 @@
 import styles from "./index.module.css";
 import Link from "next/link";
 
-
-
-
 const navigationItems = [
   { name: 'question', path: '/book/questions/add' },
   { name: 'Slide', path: '/' },
@@ -12,17 +9,16 @@ const navigationItems = [
 ];
 
 const NavTop = () => {
-    // const router = useRouter();
 
     return (
         <nav className={`${ styles.navbarTop }`}>
             <div className="container">
                 <ul className={ styles.navigationItems }>
-                    <li>
+                    <li key="home">
                         <Link href="/"> Home </Link>
                     </li>
                     {navigationItems.map((el) => (
-                        <li key={ el.name }>
+                        <li key={ el.name + 123 }>
                             <Link href={ el.path }> { el.name } </Link>
                         </li>
                     ))}

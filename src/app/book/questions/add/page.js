@@ -57,7 +57,7 @@ const Addquestion = (props) => {
                                 <CustomEditor editorData={ option1 } />
                             </div>
                             <div className={`${ styles.correctAnswer } col-2`}>
-                                <label htmlfor="correctAnswer">Correct Answer</label>
+                                <label htmlFor="correctAnswer">Correct Answer</label>
                                 <input
                                     id="correctAnswer"
                                     type="checkbox"
@@ -72,7 +72,7 @@ const Addquestion = (props) => {
                                 <CustomEditor editorData={ option2 } />
                             </div>
                             <div className={`${ styles.correctAnswer } col-2`}>
-                                <label htmlfor="correctAnswer">Correct Answer</label>
+                                <label htmlFor="correctAnswer">Correct Answer</label>
                                 <input
                                     id="correctAnswer"
                                     type="checkbox"
@@ -91,7 +91,7 @@ const Addquestion = (props) => {
                                 <CustomEditor editorData={ option1 } />
                             </div>
                             <div className={`${ styles.correctAnswer } col-2`}>
-                                <label htmlfor="correctAnswer">Correct Answer</label>
+                                <label htmlFor="correctAnswer">Correct Answer</label>
                                 <input
                                     id="correctAnswer"
                                     type="checkbox"
@@ -106,7 +106,7 @@ const Addquestion = (props) => {
                                 <CustomEditor editorData={ option2 } />
                             </div>
                             <div className={`${ styles.correctAnswer } col-2`}>
-                                <label htmlfor="correctAnswer">Correct Answer</label>
+                                <label htmlFor="correctAnswer">Correct Answer</label>
                                 <input
                                     id="correctAnswer"
                                     type="checkbox"
@@ -121,7 +121,7 @@ const Addquestion = (props) => {
                                 <CustomEditor editorData={ option3 } />
                             </div>
                             <div className={`${ styles.correctAnswer } col-2`}>
-                                <label htmlfor="correctAnswer">Correct Answer</label>
+                                <label htmlFor="correctAnswer">Correct Answer</label>
                                 <input
                                     id="correctAnswer"
                                     type="checkbox"
@@ -136,7 +136,7 @@ const Addquestion = (props) => {
                                 <CustomEditor editorData={ option4 } />
                             </div>
                             <div className={`${ styles.correctAnswer } col-2`}>
-                                <label htmlfor="correctAnswer">Correct Answer</label>
+                                <label htmlFor="correctAnswer">Correct Answer</label>
                                 <input
                                     id="correctAnswer"
                                     type="checkbox"
