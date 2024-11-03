@@ -1,27 +1,33 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { useState } from "react";
 import Link from "next/link";
 
 function NavigationBox(props) {
   return (
     <div className={ styles.navigationBox }>
-        { props.title }
+        <Link href={ props.path }>
+          <a> { props.name } </a>
+        </Link>
       </div>
   )
 }
 
-const navigationData = ["Add question", "Create Slide", "Create Archive", "Finish Book"];
+const navigationItems = [
+  { name: 'Add question', path: '/book/questions/add' },
+  { name: 'Create Slide', path: '/' },
+  { name: 'Create Archive', path: '/' },
+  { name: 'Finish Book', path: '/' },  
+];
+
 
 export default function Home() {
-  const [navData, setNavData] = useState(navigationData);
 
   return (
     <div className={styles.page}>
       <div className="row">
-        {navData.map((el) => (
+        {navigationItems.map((el) => (
           <div className="col-md-6" key={ el }>
-            <NavigationBox title={ el } />
+            <NavigationBox name={ el.name } path={ el.path } />
           </div>
         ))}
       </div>
