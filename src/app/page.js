@@ -26,7 +26,7 @@ export default function Home() {
     <div className={`container ${ styles.page }`}>
       <div className="row">
         {navigationItems.map((el) => (
-          <div className="col-md-6" key={ el }>
+          <div className="col-md-6 mb-3" key={ el }>
             <NavigationBox name={ el.name } path={ el.path } />
           </div>
         ))}

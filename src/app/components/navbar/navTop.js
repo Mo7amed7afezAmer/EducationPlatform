@@ -1,3 +1,4 @@
+"use client"
 import styles from "./index.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
