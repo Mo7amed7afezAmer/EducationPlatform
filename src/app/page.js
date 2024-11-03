@@ -23,7 +23,7 @@ const navigationItems = [
 export default function Home() {
 
   return (
-    <div className={styles.page}>
+    <div className={"container"}>
       <div className="row">
         {navigationItems.map((el) => (
           <div className="col-md-6" key={ el }>
