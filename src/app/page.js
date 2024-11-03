@@ -1,13 +1,10 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 
 function NavigationBox(props) {
   return (
     <div className={ styles.navigationBox }>
-        <Link href={ props.path }>
-          <a> { props.name } </a>
-        </Link>
+        <Link href={ props.path }> { props.name } </Link>
       </div>
   )
 }

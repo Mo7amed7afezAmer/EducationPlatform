@@ -1,31 +1,29 @@
-"use client"
 import styles from "./index.module.css";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 
 
 
 const navigationItems = [
-  { name: 'Add question', path: '/book/questions/add' },
-  { name: 'Create Slide', path: '/' },
-  { name: 'Create Archive', path: '/' },
-  { name: 'Finish Book', path: '/book' },  
+  { name: 'question', path: '/book/questions/add' },
+  { name: 'Slide', path: '/' },
+  { name: 'Archive', path: '/' },
+  { name: 'Book', path: '/book' },  
 ];
 
 const NavTop = () => {
-    const router = useRouter();
+    // const router = useRouter();
 
     return (
-        <nav className={` navbar ${ styles.navbarTop }`}>
+        <nav className={`${ styles.navbarTop }`}>
             <div className="container">
                 <ul className={ styles.navigationItems }>
                     <li>
-                        <Link href="/"><a> Home </a></Link>
+                        <Link href="/"> Home </Link>
                     </li>
                     {navigationItems.map((el) => (
                         <li key={ el.name }>
-                            <Link href={ el.path }><a className={ router.pathname === item.path ? styles.active : ''}> { el.name } </a></Link>
+                            <Link href={ el.path }> { el.name } </Link>
                         </li>
                     ))}
                 </ul>

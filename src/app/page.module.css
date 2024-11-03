@@ -10,15 +10,15 @@
   border: 1px solid var(--bg-border);
   width: 100%;
   height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .navigationBox a {
   background-color: var(--bg-secondry);
   border: 1px solid var(--bg-border);
   width: 100%;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: var(--txt-color);
 }
