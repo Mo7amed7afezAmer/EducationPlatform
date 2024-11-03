@@ -7,6 +7,7 @@
   --bg-border: #cacaca;
   --txt-color: #0a0a0a;
   --muted-color: #595959;
+  --skin-color: orange
 }
 
 @media (prefers-color-scheme: light) {

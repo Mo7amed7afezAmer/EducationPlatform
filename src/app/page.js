@@ -16,14 +16,14 @@ const navigationItems = [
   { name: 'Add question', path: '/book/questions/add' },
   { name: 'Create Slide', path: '/' },
   { name: 'Create Archive', path: '/' },
-  { name: 'Finish Book', path: '/' },  
+  { name: 'Finish Book', path: '/book' },  
 ];
 
 
 export default function Home() {
 
   return (
-    <div className={"container"}>
+    <div className={`container ${ styles.page }`}>
       <div className="row">
         {navigationItems.map((el) => (
           <div className="col-md-6" key={ el }>

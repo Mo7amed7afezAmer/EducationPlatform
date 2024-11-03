@@ -1,33 +1,35 @@
 import styles from "./index.module.css";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
+
+
+
+const navigationItems = [
+  { name: 'Add question', path: '/book/questions/add' },
+  { name: 'Create Slide', path: '/' },
+  { name: 'Create Archive', path: '/' },
+  { name: 'Finish Book', path: '/book' },  
+];
 
 const NavTop = () => {
+    const router = useRouter();
+
     return (
-        <nav className={` navbar container ${ styles.test }`}>
-            <div className={ `d-md-flex d-block ${styles.navbarTopParent}` }>
-                <div className={ `${styles.navbarLogo} mb-1` }>
-                    <a className="navbar-brand" href="#">Navbar</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <form className="navbar-search d-flex w-md-100" role="search">
-                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                </form>
-                <div className="navbar-info">
-                    <ul className="d-md-flex d-none navbar-nav">
-                        <li className="navbar-info-item">
-                            <a href="#">cart</a>
+        <nav className={` navbar ${ styles.navbarTop }`}>
+            <div className="container">
+                <ul className={ styles.navigationItems }>
+                    <li>
+                        <Link href="/"><a> Home </a></Link>
+                    </li>
+                    {navigationItems.map((el) => (
+                        <li key={ el.name }>
+                            <Link href={ el.path }><a className={ router.pathname === item.path ? styles.active : ''}> { el.name } </a></Link>
                         </li>
-                        <li className="navbar-info-item">
-                            <a href="#">notify</a>
-                        </li>
-                        <li className="navbar-info-item">
-                            <a href="#">login</a>
-                        </li>
-                    </ul>
-                </div>
+                    ))}
+                </ul>
             </div>
-            </nav>
+        </nav>
     )
 }
 

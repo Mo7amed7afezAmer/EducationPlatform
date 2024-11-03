@@ -1,18 +1,21 @@
-.navbarTopParent {
+.navbarTop {
     width: 100vw;
+    background-color: var(--bg-primary);
+}
+.navigationItems {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 15;
-}
-.navbarLogo {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--bg-border);
+    width: 100%;
+    overflow-x: auto;
 }
 
+.navigationItems a {
+    color: var(--txt-color);
+    padding: 15px;
+}
 
-
-.test {
-    background-color: #cc00cc;
+.active {
+    background-color: var(--skin-color);
 }
