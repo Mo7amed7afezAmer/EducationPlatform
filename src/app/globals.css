@@ -1,6 +1,4 @@
 :root {
-  /* --background: #ffffff;
-  --foreground: #171717; */
 
   --bg-primary: #e6e6e6;
   --bg-secondry: #dadada;
@@ -9,7 +7,14 @@
   --muted-color: #595959;
   --skin-color: orange
 }
-
+:root x {
+  --bg-primary: #1a1a1a;       /* Dark background */
+  --bg-secondary: #2a2a2a;     /* Slightly lighter background */
+  --bg-border: #3a3a3a;        /* Dark border */
+  --txt-color: #f5f5f5;        /* Light text color */
+  --muted-color: #a1a1a1;      /* Muted, medium-light gray */
+  --skin-color: #ff9800;       /* Bright accent color (orange) */
+}
 @media (prefers-color-scheme: light) {
   :root {
     --background: var(--bg-primary);

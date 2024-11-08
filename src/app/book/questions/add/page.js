@@ -4,52 +4,70 @@ import styles from './page.module.css'
 // import CustomEditor from '@/app/components/custom-editor';
 import dynamic from 'next/dynamic';
 
+// components
+import { SlideParent } from '@/app/components/slide';
+
 const CustomEditor = dynamic( () => import( '@/app/components/custom-editor' ), { ssr: false } );
+
 
 
 const Addquestion = (props) => {
     const [type, setType] = useState("multiple");
     const [questionNumber, setQuestionNumber] = useState("two");
-    const [correctAnswer, setCorrectAnswer] = useState('');
+    const [showSlide, setShowSlide] = useState(false);
     // question and options
     const[question, setQuestion] = useState("<p>Add Question</p>");
     const[option1, setOption1] = useState("<p>option one</p>");
     const[option2, setOption2] = useState("<p>option two</p>");
     const[option3, setOption3] = useState("<p>option three</p>");
     const[option4, setOption4] = useState("<p>option four</p>");
+    const [correctAnswer, setCorrectAnswer] = useState('');
     // تجميعات
     const years = Array.from({ length: 5 }, (_, i) => 2020 + i);
 
+    // methods
+    const slideData = () => {
+        setShowSlide(!showSlide);
+        console.log(question)
+    }
+
     return (
        <div className={`${styles.addQuestion} container-fluid`}>
-             <form>
-                <h2>Add a New Question</h2>
+            <form>
+                <div className={ styles.pageTitle }>
+                    <h2>Add a New Question</h2>
+                    <div className={ styles.showButtons } style={{display: "none"}}>
+                        <button className={ styles.sendButton } type="submit">send</button>
+                        <button className={ styles.displayButton } type="submit">display</button>
+                        <button className={ styles.slideButton } type="submit">slide</button>
+                    </div>
+                </div>
                 <div className={`w-100`}>
                     <div className={`${styles.question} mb-3`}>
-                        <CustomEditor editorData={ question } />
+                        <CustomEditor editorData={ question } updateEditorData={ setQuestion } />
                     </div>
                     <div className={`${ styles.questionType} mb-3`}>
                         <select
-                            value={type}
+                            defaultValue={type}
                             onChange={(e) => setType(e.target.value)}
                         >
-                            <option value="" disabled>Question Type</option>
+                            <option defaultValue="" disabled>Question Type</option>
                             <option value="text">Short Answer</option>
                             <option value="multiple">Multiple Choice</option>
                         </select>
                     </div>
                     {type === "multiple" &&
+                    <>
                     <div className={`${ styles.questionType} mb-3`}>
                         <select
-                            value={questionNumber}
+                            defaultValue={questionNumber}
                             onChange={(e) => setQuestionNumber(e.target.value)}
                         >
-                            <option value="" disabled>Question Numbers</option>
+                            <option defaultValue="" disabled>Question Numbers</option>
                             <option value="two">2</option>
                             <option value="four">4</option>
                         </select>
                     </div>
-                    }
                     {questionNumber === "two" &&
                     <>
                         <div className={`${ styles.chooseBox } row mb-3`}>
@@ -148,9 +166,10 @@ const Addquestion = (props) => {
                         </div>
                     </>
                     }
+                    </>}
                     {<div className={`${ styles.questionType} col-12 mb-3`}>
                         <select
-                            value={"questionNumber"}
+                            defaultValue={"questionNumber"}
                         >
                             <option value="" disabled>collection exams</option>
                             {years.map((year) => (
@@ -163,10 +182,13 @@ const Addquestion = (props) => {
                     }
                     
                 </div>
-                
-                
-                <button type="submit">Submit Question</button>
+                <div className={ styles.showButtons }>
+                    <button className={ styles.sendButton } type="button" onClick={() => displayData()}>send</button>
+                    <button className={ styles.displayButton } type="button">display</button>
+                    <button className={ styles.slideButton } type="button" onClick={() => slideData()}>slide</button>
+                </div>
             </form>
+            <SlideParent showElement={showSlide} question={question} option1={option1} option2={option2} option3={option3} option4={option4} />
        </div>
     );
 };

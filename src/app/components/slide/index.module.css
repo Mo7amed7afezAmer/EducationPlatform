@@ -1,0 +1,11 @@
+.slideParent {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--bg-border);
+    color: var(--txt-color);
+    width: 90vw;
+    height: 90vh;
+    position: fixed;
+    top: 5vh;
+    right: 5vw;
+    z-index: 999;
+}
