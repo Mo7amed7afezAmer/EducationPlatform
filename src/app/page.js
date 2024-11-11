@@ -11,7 +11,7 @@ function NavigationBox(props) {
 
 const navigationItems = [
   { name: 'Add question', path: '/book/questions/add' },
-  { name: 'Create Slide', path: '/' },
+  { name: 'Create Slide', path: '/slide' },
   { name: 'Create Archive', path: '/' },
   { name: 'Finish Book', path: '/book' },  
 ];

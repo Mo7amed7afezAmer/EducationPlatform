@@ -1,0 +1,90 @@
+.page {
+    border: 1px solid red;
+    width: 854.28px;
+    height: 1081px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 15px;
+}
+.bookArticle {
+    background-color: var(--bg-primary);
+    width: 303px;
+    padding: 50px 30px 30px 30px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.example {
+    background-color: var(--bs-white);
+    min-height: 150px;
+    width: 100%;
+    height: fit-content;
+    border-radius: 7px;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.exampleQuestion {
+    display: flex;
+    gap: 10px;
+}
+.questionHint {
+    width: 40px;
+    background: #02ca7d;
+    color: #fff;
+    height: fit-content;
+    padding: .5px 5px 3px;
+    font-weight: blod;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.exampleLine {
+    width: 100%;
+    border: 1.5px solid var(--bg-border);
+}
+
+
+.bookQuestion {
+    background-color: var(--bs-white);
+    width: calc(854.28px - 303px);
+    padding: 50px 30px 30px 30px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.answerHint {
+    width: 40px;
+    border: 1px solid #02ca7d;
+    color: #02ca7d;
+    height: fit-content;
+    padding: .5px 5px 3px;
+    font-weight: blod;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+
+
+.choose {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.choose div {
+    display: flex;
+    flex-direction: row;
+    width: calc(50% - 3px);
+    gap: 6px;
+}
+.choose div span {
+    border: 1px solid red;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    display: flex;
+
+}
+.choose div p {
+    margin-bottom: 0;
+}
