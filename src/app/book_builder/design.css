@@ -1,0 +1,191 @@
+
+
+:root {
+    --skin-color: rgb(138, 0, 0);
+  }
+  
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #8b7c7c;
+    font: 12pt "Tahoma";
+    font-family: 'Cambria Math', serif;
+  }
+  * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+  .math {
+    font-family: 'Cambria Math', serif;
+  }
+  .container-paper {
+    width: 226mm;
+    height: 286mm;
+    margin: auto;
+    margin-top: 20px;
+    /* display: flex;
+    flex-direction: column;
+    gap: 2mm */
+  }
+  .paper {
+   background-color: #fff;
+   width: 226mm;
+   height: 286mm;
+   margin-top: 2mm;
+   display: flex;
+  }
+  @page {
+   background-color: #fff;
+   width: 226mm;
+   height: 286mm;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+  }
+  @media print {
+   body {-webkit-print-color-adjust: exact;}
+   .container {
+       margin: 0;
+   }
+  }
+  
+  .section {
+   min-height: 50px;
+   background-color: #271515;
+   border-bottom: 1mm dashed red;
+  }
+  
+  /* =========== unit paper */
+  .unit-paper {
+   width: 226mm;
+   height: 286mm;
+   margin: 0;
+   position: relative;
+  }
+  .unit-paper:after {
+   content: "";
+   background-color: var(--skin-color);
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 40%;
+   /* border-radius:70% 0 0 70%; */
+   z-index: 1;
+  }
+  .unit-title {
+   background-color: #000;
+   color: #fff;
+   font-size: 20pt;
+   font-weight: bold;
+   position: absolute;
+   top: 50%;
+   right: 20%;
+   width: 60%;
+   z-index: 999;
+   height: 28mm;
+   display: flex;
+   align-items: center;
+   padding-right: 4mm;
+   padding-left: 4mm;
+   border-radius: 5mm 0 0 5mm;
+  }
+  
+  /* article */
+  .book-bar {
+    width: 10mm;
+    background-color: var(--skin-color);
+    height: 23mm;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-bottom: 12mm
+  }
+  .unit-titles {
+    background-color: var(--unit-title, #000);
+    color: var(--white, #fff);
+    border-radius: 8mm 0 0 8mm;
+    height: 16mm;
+    padding-right: 3mm;
+    padding-left: 3mm;
+    display: flex;
+    align-items: center;
+    font-family: 'Neo Sans Arabic Black', sans-serif;
+    font-size: 16pt;
+    margin-bottom: 4mm;
+    font-weight: bold;
+    position: relative;
+    z-index: 999
+  }
+  .lesson-title {
+    background-color: var(--skin-color);
+    width: 65mm;
+    height: 8mm;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding-right: 3mm;
+    padding-left: 3mm;
+    border-radius: 2mm 0 0 2mm;
+  }
+  .lesson-article {
+    margin-top: 4mm;
+    margin-bottom: 4mm;
+    display: flex;
+    flex-direction: column;
+    gap: 4mm;
+  }
+  .define {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .title {
+    background-color: var(--skin-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 5mm;
+    padding-right: 2mm;
+    padding-left: 2mm;
+    border-radius: 5mm;
+    margin-left: 2mm;
+    font-size: 9pt
+  }
+  .law {
+    border: 1mm solid rgb(255, 212, 169);
+    height: 25mm;
+    border-radius: 2mm;
+  }
+  .example {
+    height: 40mm;
+    margin-bottom: 4mm;
+    border-bottom: 1mm solid #fff
+  }
+  
+  @page {
+    background-color: #fff;
+    width: 226mm;
+    height: 286mm;
+    margin: 0;
+  }
+  @media print {
+    .body {-webkit-print-color-adjust: exact; margin: 0}
+    .container-paper {
+        margin: 0;
+    }
+    nav {
+      display: none
+    }
+  }
+  /* @media not print {
+    nav {}
+  } */
+  
+  p {
+    margin: 0;
+  }
+  

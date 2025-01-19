@@ -4,6 +4,9 @@ import styles from './page.module.css'
 // import CustomEditor from '@/app/components/custom-editor';
 import dynamic from 'next/dynamic';
 
+// data
+import { createQuestion } from '@/context/questions/data';
+
 // components
 import { SlideParent } from '@/app/components/slide';
 
@@ -28,7 +31,8 @@ const Addquestion = (props) => {
     // methods
     const slideData = () => {
         setShowSlide(!showSlide);
-        console.log(question)
+        console.log(question);
+        createQuestion("math", {id: 5, questionText: question, option1, option2, option3, option4, correct: correctAnswer})   
     }
 
     return (

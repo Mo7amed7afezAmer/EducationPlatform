@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 
+import MyCustomButton from './custom';
+
 import {
 	ClassicEditor,
 	AccessibilityHelp,
@@ -76,7 +78,7 @@ export default function CustomEditor(props) {
 				'outdent',
 				'indent',
                 "|",
-                "alignment", "mathType"
+                "alignment", "mathType", "|"
 			],
 			shouldNotGroupWhenFull: false
 		},
@@ -112,7 +114,7 @@ export default function CustomEditor(props) {
 			Underline,
 			Undo,
             Alignment,
-            MathType
+            MathType,
 		],
 		balloonToolbar: ['bold', 'italic', '|', 'link', "|", "alignment"],
 		blockToolbar: ['bold', 'italic', '|', 'link', 'insertTable', '|', 'outdent', 'indent'],

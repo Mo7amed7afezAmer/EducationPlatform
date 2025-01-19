@@ -13,7 +13,7 @@ const navigationItems = [
   { name: 'Add question', path: '/book/questions/add' },
   { name: 'Create Slide', path: '/slide' },
   { name: 'Create Archive', path: '/' },
-  { name: 'Finish Book', path: '/book' },  
+  { name: 'Book builder', path: '/book_builder' },
 ];
 
 

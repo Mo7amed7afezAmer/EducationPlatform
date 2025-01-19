@@ -6,7 +6,7 @@ const navigationItems = [
   { name: 'Slide', path: '/' },
   { name: 'Archive', path: '/' },
   { name: 'Book', path: '/book' },
-  { name: 'Contact', path: '/' }, 
+  { name: 'lessons', path: '/book/lessons' }, 
 ];
 
 const NavTop = () => {
