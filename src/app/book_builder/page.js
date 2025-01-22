@@ -1,72 +1,46 @@
-import styles from "./page.module.css";
 import "./design.css";
 
 // import data
-import data from "./data.json";
+import unitData from "./data/units.json";
+import bookInfo from "./data/book-info.json";
 
-
-// template components
-const UnitTitle = (props) => {
-    return (
-        <div className="unit-title">
-            { props.unitTitle }
-        </div>
-    )
-}
-/* ==================== */
-const LessonTitle = (props) => {
-    return (
-        <div className="lesson-title">
-            { props.lessonTitle }
-        </div>
-    )
-}
-/* ==================== */
-const MainTitle = (props) => {
-    return (
-        <div className="main-title">
-            { props.mainTitle }
-        </div>
-    )
-}
-/* ==================== */
-const Define = (props) => {
-    return (
-        <div className="define">
-            <p><span> { props.define[0] } </span> { props.define[1] } </p>
-        </div>
-    )
-}
-/* ==================== */
-const SecondLevel = (props) => {
-    return (
-        <div className="second-level">
-            secondLevel
-        </div>
-    )
-}
-/* ==================== */
-
+// components
+import { LessonTitle, ArticleTitle, Define, SecondLevel, Law } from "@/app/book_builder/_components/article/index";
+import { BookBarBottom } from "./_components/global";
 
 /* ========= methods */
-function mapArticlesToComponent(item) {
+function mapSectionToComponent(item) {
     switch (item.type) {
-      case "title": {
-        return "<title />";
-      }
-      case "define": {
-        return "<define />";
-      }
-      case "secondLevel": {
-        return "<secondLevel />";
-      }
-      default: {
-        return "=============mo7amed7afez";
-      }
+        case "articleTitle": {
+            return <ArticleTitle data={ item.data } />;
+        }
+        case "define": {
+            return <Define data={ item.data } />;
+        }
+        case "law": {
+            return <Law data={ item.data } />;
+        }
+        case "secondLevel": {
+            return <SecondLevel data={ item.data } />;
+        }
+        default: {
+            return <p>"=============mo7amed7afez"</p>;
+        }
     }
-  }
+}
 
-  console.log(data)
+/* ==================== */
+const ArticlePaper = (props) => {
+    return (
+        <>
+            {
+                props.data.map((item) => mapSectionToComponent(unitData.lessons[0].articles[item]))
+            }
+        </>
+    )
+}
+
+
 
 const BookBuilder = () => {
     return (
@@ -74,14 +48,26 @@ const BookBuilder = () => {
             <div className="paper unit-paper">
                 <div class="unit-title">المالمح الطبيعية لقارة إفريقيا وحضاراتها القديمة</div>
             </div>
-            <div className="paper">
-                <LessonTitle lessonTitle={ data.lessons[0].lessonName } />
-                <LessonTitle lessonTitle={ data.lessons[0].lessonName } />
-                <LessonTitle lessonTitle={ data.lessons[0].lessonName } />
-                <LessonTitle lessonTitle={ data.lessons[0].lessonName } />
-                <LessonTitle lessonTitle={ data.lessons[0].lessonName } />
-                
-            </div>
+            {bookInfo.map((item, index) => {
+                if (item.d[0]) {
+                    return (
+                        <div className={`paper ${item.type == "articlePaper" ? "article-paper" : "unit-paper"}`}>
+                            <ArticlePaper data={ item.d } />
+                            {/* <ArticlePaper data={ [0, 1, 2, 3, 4, 5] } /> */}
+                            <BookBarBottom paperNumber={ index } />
+                        </div>
+                    ) 
+                } else {
+                    return (
+                        <div className={`paper ${item.type == "articlePaper" ? "article-paper" : "unit-paper"}`}>
+                            <LessonTitle lessonTitle={ unitData.lessons[item.lessonNumber].lessonName } />
+                            <ArticlePaper data={ item.d } />
+                            {/* <ArticlePaper data={ [0, 1, 2, 3, 4, 5] } /> */}
+                            <BookBarBottom paperNumber={ index } />
+                        </div>
+                    ) 
+                }
+            })}
         </div>
     )
 }

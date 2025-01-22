@@ -1,0 +1,116 @@
+{
+    "id": 1,
+    "unitName": "المالمح الطبيعية لقارة إفريقيا وحضاراتها القديمة",
+    "lessons": [
+      {
+        "id": 1,
+        "lessonName": "قارة إفريقي(الموقع والكشوف الجغرافية)",
+        "articles": [
+          {
+            "type": "title",
+            "data":  ""
+          },
+          {
+            "type": "image",
+            "data": "image"
+          },
+          {
+            "type": "define",
+            "data": "define"
+          },
+          {
+            "type": "benefit",
+            "data": "benefit"
+          },
+          {
+            "type": "secondLevel",
+            "data": "secondLevel"
+          },
+          {
+            "type": "point",
+            "data": "point"
+          },
+          {
+            "type": "point",
+            "data": "point"
+          },
+          {
+            "type": "define",
+            "data": "define"
+          },
+          {
+            "type": "secondLevel",
+            "data": "secondLevel"
+          },
+          {
+            "type": "point",
+            "data": "point"
+          },
+          {
+            "type": "define",
+            "data": "define"
+          },
+          {
+            "type": "secondLevel",
+            "data": "secondLevel"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "lessonName": "الدرس التاني",
+        "articles": [
+          {
+            "type": "title",
+            "data":  ""
+          },
+          {
+            "type": "image",
+            "data": "image"
+          },
+          {
+            "type": "define",
+            "data": "define"
+          },
+          {
+            "type": "benefit",
+            "data": "benefit"
+          },
+          {
+            "type": "secondLevel",
+            "data": "secondLevel"
+          },
+          {
+            "type": "point",
+            "data": "point"
+          },
+          {
+            "type": "point",
+            "data": "point"
+          },
+          {
+            "type": "define",
+            "data": "define"
+          },
+          {
+            "type": "secondLevel",
+            "data": "secondLevel"
+          },
+          {
+            "type": "point",
+            "data": "point"
+          },
+          {
+            "type": "define",
+            "data": "define"
+          },
+          {
+            "type": "secondLevel",
+            "data": "secondLevel"
+          }
+        ]
+      }
+    ]
+  }
+  
+  
