@@ -9,22 +9,22 @@ import { LessonTitle, ArticleTitle, Define, SecondLevel, Law } from "@/app/book_
 import { BookBarBottom } from "./_components/global";
 
 /* ========= methods */
-function mapSectionToComponent(item) {
+function mapSectionToComponent(item, index) {
     switch (item.type) {
         case "articleTitle": {
-            return <ArticleTitle data={ item.data } />;
+            return <ArticleTitle key={ index } data={ item.data } />;
         }
         case "define": {
-            return <Define data={ item.data } />;
+            return <Define key={ index } data={ item.data } />;
         }
         case "law": {
-            return <Law data={ item.data } />;
+            return <Law key={ index } data={ item.data } />;
         }
         case "secondLevel": {
-            return <SecondLevel data={ item.data } />;
+            return <SecondLevel key={ index } data={ item.data } />;
         }
         default: {
-            return <p>"=============mo7amed7afez"</p>;
+            return <p key={ index }>=============mo7amed7afez</p>;
         }
     }
 }
@@ -34,11 +34,13 @@ const ArticlePaper = (props) => {
     return (
         <>
             {
-                props.data.map((item) => mapSectionToComponent(unitData.lessons[0].articles[item]))
+                props.data.map((item, index) => mapSectionToComponent(unitData.lessons[0].articles[item], index))
             }
         </>
     )
 }
+
+
 
 
 
@@ -51,7 +53,7 @@ const BookBuilder = () => {
             {bookInfo.map((item, index) => {
                 if (item.d[0]) {
                     return (
-                        <div className={`paper ${item.type == "articlePaper" ? "article-paper" : "unit-paper"}`}>
+                        <div key={ index } className={`paper ${item.type == "articlePaper" ? "article-paper" : "unit-paper"}`}>
                             <ArticlePaper data={ item.d } />
                             {/* <ArticlePaper data={ [0, 1, 2, 3, 4, 5] } /> */}
                             <BookBarBottom paperNumber={ index } />
@@ -59,7 +61,7 @@ const BookBuilder = () => {
                     ) 
                 } else {
                     return (
-                        <div className={`paper ${item.type == "articlePaper" ? "article-paper" : "unit-paper"}`}>
+                        <div key={ index } className={`paper ${item.type == "articlePaper" ? "article-paper" : "unit-paper"}`}>
                             <LessonTitle lessonTitle={ unitData.lessons[item.lessonNumber].lessonName } />
                             <ArticlePaper data={ item.d } />
                             {/* <ArticlePaper data={ [0, 1, 2, 3, 4, 5] } /> */}
